@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import Header from "@/components/ui/header";
+import Footer from "@/components/ui/footer";
 
 import { AuthProvider } from "@/providers/auth";
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <AuthProvider>
           <Header />
           {children}
+          <Footer />
         </AuthProvider>
       </body>
     </html>
