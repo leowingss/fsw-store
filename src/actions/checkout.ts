@@ -14,7 +14,7 @@ export const createCheckout = async (products: CartProduct[]) => {
     success_url: process.env.HOST_URL,
     cancel_url: process.env.HOST_URL,
     metadata: {
-      products: JSON.stringify(products),
+      products: JSON.stringify(products.toString()),
     },
     line_items: products.map((product) => {
       return {
